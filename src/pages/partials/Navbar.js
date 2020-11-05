@@ -38,7 +38,7 @@ function Navbar() {
                 <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
                 <BSNavbar.Collapse id="responsive-navbar-nav" className="App-partials">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
+                        
                         
                         <NavDropdown title="가상자산" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
@@ -57,20 +57,20 @@ function Navbar() {
                         </NavDropdown>
                     </Nav>
 
+                    {token===null ? (
                     <Nav>
-                    
-                    {token===null ? <Nav.Link href="../CompanyLogin">로그인</Nav.Link> :<Nav.Link onClick={(e)=>{
-                                    e.preventDefault();
-                                    localStorage.removeItem('user')
-                                    window.location.href='/'
-                                }}>로그아웃</Nav.Link> } 
-                                
-                                <Nav.Link href="../Join">회원가입</Nav.Link>
-                    </Nav>
+                        <Nav.Link href="../CompanyLogin">로그인</Nav.Link>
+                        <Nav.Link href="../Join">회원가입</Nav.Link>
+                    </Nav> ) : (
+                    <Nav>
+                        <Nav.Link onClick={(e)=>{
+                            e.preventDefault();
+                            localStorage.removeItem('user')
+                            window.location.href='/'
+                        }}>로그아웃</Nav.Link>
+                    </Nav>)} 
                 </BSNavbar.Collapse>
             </BSNavbar>
-
-
         </div>
     )
 }
