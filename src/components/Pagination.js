@@ -5,12 +5,12 @@ const Pagination = ({ active, last, paginationLimite, onClick }) => {
     return (
         <BSPagination>
             {(() => {
-                if (active > paginationLimite) {
+                if ( active > paginationLimite ) {
                     return (
                         <BSPagination.Prev
                             onClick={() =>
                                 onClick(
-                                    (Math.floor(active / paginationLimite) - 1) * paginationLimite
+                                    (Math.ceil(active / paginationLimite) - 1) * paginationLimite
                                 )
                             }
                         />
@@ -66,7 +66,7 @@ const Pagination = ({ active, last, paginationLimite, onClick }) => {
                         <BSPagination.Next
                             onClick={() =>
                                 onClick(
-                                    Math.floor(active / paginationLimite) * paginationLimite + 1
+                                    Math.ceil(active / paginationLimite) * paginationLimite + 1
                                 )
                             }
                         />

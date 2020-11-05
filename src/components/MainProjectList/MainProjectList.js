@@ -15,8 +15,8 @@ function ProjectItemScreen() {
   const [users, setUsers] = useState([]);
   const [loc, setLoc] = useState(1);
 
-  const pageLimit = 9;
-  const paginationLimite = 5;
+  const pageLimit = 1;
+  const paginationLimite = 2;
 
   // list length
   const totalLength = useMemo(() => {

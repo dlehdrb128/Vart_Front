@@ -38,21 +38,20 @@ function Navbar() {
                 <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
                 <BSNavbar.Collapse id="responsive-navbar-nav" className="App-partials">
                     <Nav className="mr-auto">
-                        
+                        <Nav.Link href="../About">소개</Nav.Link>
+
+                        <Nav.Link href="../Service">서비스</Nav.Link>
                         
                         <NavDropdown title="가상자산" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
-                            <NavDropdown.Item href="../Newdisclosure">최근 공시</NavDropdown.Item>
+                            <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="../projectItemCreate">공시등록_Test</NavDropdown.Item>
-                            <NavDropdown.Item href="../DisclosureCreate">테스트</NavDropdown.Item>
+                            <NavDropdown.Item href="../projectItemCreate">프로필 등록</NavDropdown.Item>
+                            <NavDropdown.Item href="../DisclosureCreate">공시 등록</NavDropdown.Item>
                         </NavDropdown>
 
-                        <Nav.Link href="../Service">서비스</Nav.Link>
                         <NavDropdown title="고객센터" id="collasible-nav-dropdown2">
                             <NavDropdown.Item href="../Announcement">공지사항</NavDropdown.Item>
-                            <NavDropdown.Item href="../About">소개</NavDropdown.Item>
-                            <NavDropdown.Divider />
                             <NavDropdown.Item href="../Faq">고객센터</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
