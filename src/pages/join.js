@@ -1,6 +1,7 @@
 import React from 'react'
 import { Image, Button, Card, Container } from 'react-bootstrap';
 import manimage from "../images/man.jpg";
+import companyimage from "../images/company.png"
 import "../pages/partials/css/cc.css"
 
 function join() {
@@ -15,7 +16,6 @@ function join() {
           fluid
           href="/"
         />
-        <div>환영합니다.</div>
       </header>
       <div className="app-body">
         <Container  >
@@ -34,7 +34,7 @@ function join() {
             </li>
             <li>
               <Card className="service-card-form  service-card">
-                <Card.Img variant="top" src={manimage} className="image-size" />
+                <Card.Img variant="top" src={companyimage} className="image-size" />
                 <Card.Body>
                   <Card.Text>
                     가상화폐 공시를 등록하고

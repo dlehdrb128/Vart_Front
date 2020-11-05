@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo  } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Container, Table } from "react-bootstrap";
 
 import MainProjectListItem from "./MainProjectListItem";
@@ -15,8 +15,8 @@ function ProjectItemScreen() {
   const [users, setUsers] = useState([]);
   const [loc, setLoc] = useState(1);
 
-  const pageLimit = 1;
-  const paginationLimite = 2;
+  const pageLimit = 10;
+  const paginationLimite = 5;
 
   // list length
   const totalLength = useMemo(() => {
@@ -71,7 +71,7 @@ function ProjectItemScreen() {
               </tr>
             </thead>
             <tbody>
-            {users.slice((loc - 1) * pageLimit, loc * pageLimit).map((company, name) => (
+              {users.slice((loc - 1) * pageLimit, loc * pageLimit).map((company, name) => (
                 <MainProjectListItem company={company} key={company.id} />
               ))}
             </tbody>

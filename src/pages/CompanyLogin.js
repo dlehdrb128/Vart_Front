@@ -57,8 +57,6 @@ const CompanyLogin = ({ history }) => {
           fluid
           href="/"
         />
-        <h1>Login</h1>
-        <h2>로그인하세요!</h2>
         <hr></hr>
       </header>
       <div className="app-body">
@@ -68,6 +66,7 @@ const CompanyLogin = ({ history }) => {
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
+                className="LoginBox"
                 type="email"
                 placeholder="Enter email"
                 onChange={(e) => {
@@ -83,6 +82,7 @@ const CompanyLogin = ({ history }) => {
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
+                className="LoginBox"
                 type="password"
                 placeholder="Password"
                 onChange={(e) => {
@@ -101,7 +101,7 @@ const CompanyLogin = ({ history }) => {
                 sumbitLogin(userEmail, pwd);
               }}
             >
-              Submit
+              Login
             </Button>
           </Form>
         </Container>

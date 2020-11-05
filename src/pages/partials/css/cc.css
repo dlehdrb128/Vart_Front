@@ -1,5 +1,6 @@
 .MainButton{
     margin-top:100px;
+    margin-left:100px;
     max-height: 600px;
     max-width: 2000px;
     overflow: hidden;
@@ -10,7 +11,10 @@
   .MainFont{
     color: rgb(48, 45, 219);
   }
-  
+  .LoginBox{
+    max-width: 400px;
+    margin: auto;
+  }
   .image{
     margin-left: 700px;
     max-height: 600px;
@@ -30,10 +34,17 @@
     overflow: hidden;
   }
 .image-size {
-max-width: 350px;
-max-height: 350px;
+  width:300px;
+  height:300px;
 }
-
+.bg{
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  top:0;
+}
+.NavLog{
+  margin-left: 1300px;
+}
 
     /* Desktop */
     .service-card{

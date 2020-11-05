@@ -5,16 +5,16 @@ import '../../App.css';
 
 function Navbar() {
     const [token, setToken] = React.useState(null);
-    
 
-    const watchToken = ()=>{
+
+    const watchToken = () => {
         console.log("A")
-        console.log(localStorage.getItem('user'));    
+        console.log(localStorage.getItem('user'));
         setToken(localStorage.getItem('user'))
     }
 
-   
-    React.useEffect(()=>{
+
+    React.useEffect(() => {
         window.addEventListener('storage', watchToken);
         watchToken();
         return () => window.removeEventListener('storage', watchToken)
@@ -41,7 +41,7 @@ function Navbar() {
                         <Nav.Link href="../About">소개</Nav.Link>
 
                         <Nav.Link href="../Service">서비스</Nav.Link>
-                        
+
                         <NavDropdown title="가상자산" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
                             <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
@@ -56,18 +56,18 @@ function Navbar() {
                         </NavDropdown>
                     </Nav>
 
-                    {token===null ? (
-                    <Nav>
-                        <Nav.Link href="../CompanyLogin">로그인</Nav.Link>
-                        <Nav.Link href="../Join">회원가입</Nav.Link>
-                    </Nav> ) : (
-                    <Nav>
-                        <Nav.Link onClick={(e)=>{
-                            e.preventDefault();
-                            localStorage.removeItem('user')
-                            window.location.href='/'
-                        }}>로그아웃</Nav.Link>
-                    </Nav>)} 
+                    {token === null ? (
+                        <Nav>
+                            <Nav.Link href="../CompanyLogin">로그인</Nav.Link>
+                            <Nav.Link href="../Join">회원가입</Nav.Link>
+                        </Nav>) : (
+                            <Nav>
+                                <Nav.Link onClick={(e) => {
+                                    e.preventDefault();
+                                    localStorage.removeItem('user')
+                                    window.location.href = '/'
+                                }}>로그아웃</Nav.Link>
+                            </Nav>)}
                 </BSNavbar.Collapse>
             </BSNavbar>
         </div>
