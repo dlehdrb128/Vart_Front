@@ -1,12 +1,12 @@
-import React, { useState, render } from "react";
+import React from "react";
 import "../../App.css";
 import "./css/cc.css"
-import { Link } from "react-router-dom"
+
 // import TutorLogin from "./components/TutorLogin";
 
-import { Div, Button, Carousel, Image, Container } from "react-bootstrap";
+import { Image, Container } from "react-bootstrap";
 
-const ControlledCarouselBanel = ({ history }) => {
+const ControlledCarouselBanel = () => {
   return (
     <Container className="cc-max">
       <Container>
@@ -23,36 +23,7 @@ const ControlledCarouselBanel = ({ history }) => {
           alt="First slide"
           fluid
         />
-
-        <Container className="MainFont">
-
-        </Container>
       </Container>
-      {/* <Carousel.Item>
-        <img
-          src={require("../../images/Dawn2.gif")}
-          height="400px"
-          width="2000px"
-          alt="Second slide"
-          fluid
-        />
-        <Carousel.Caption>
-          <h3>신뢰와 투명한 공시</h3>
-          <p>세계속 가상자산 시장의 여명이 되겠습니다.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          src={require("../../images/Dawn3.jpg")}
-          width="2000px"
-          alt="Third slide"
-          fluid
-        />
-        <Carousel.Caption>
-          <h3>지금 당장 이용하세요!</h3>
-          <p>RIGHT NOW!</p>
-        </Carousel.Caption>
-      </Carousel.Item> */}
     </Container>
   );
 };

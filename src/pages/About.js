@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { Image, Button, Card, Container } from "react-bootstrap";
+import { Image, Card, Container } from "react-bootstrap";
 const About = ({ history }) => {
 
   return (
@@ -14,16 +14,6 @@ const About = ({ history }) => {
           alt="First slide"
           fluid
           href="/" />
-        <div>
-          <div>
-            <div>소개</div>
-            <div>저희 회사는 무결성 공시정보 개시를 목적으로 추구합니다.</div>
-          </div>
-          <div>
-            <div>서비스소개</div>
-            <div>블록체인을 이용힌 투명한 가상자산 공시 플랫폼</div>
-          </div>
-        </div>
       </header>
       <div className="app-body">
         <Container>
