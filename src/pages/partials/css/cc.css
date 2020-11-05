@@ -39,11 +39,19 @@
 }
 .bg{
   position: fixed;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255) !important;
   top:0;
+  left: 0;
+  right: 0;
+}
+.About{
+  max-width: 2000px;
+  max-height: 2000px;
 }
 .NavLog{
-  margin-left: 1300px;
+  top:0;
+  left: 0;
+
 }
 
     /* Desktop */

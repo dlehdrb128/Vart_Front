@@ -1,10 +1,18 @@
 import React from "react";
 import "../App.css";
-import { Button, Card, Container } from "react-bootstrap";
+import { Image, Button, Card, Container } from "react-bootstrap";
 const About = ({ history }) => {
   return (
     <div className="App">
       <header className="app-header">
+        <Image
+          className="cc-carousel-item-image"
+          src={require("../images/VART_.png")}
+          width="300px"
+          height="200px"
+          alt="First slide"
+          fluid
+          href="/" />
         <div>
           <div>
             <div>소개</div>

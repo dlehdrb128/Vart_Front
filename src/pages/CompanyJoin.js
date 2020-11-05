@@ -1,32 +1,32 @@
 import React from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Image, Button, Container, Form } from "react-bootstrap";
 
 import "../App.css";
 
 const CompanyJoin = ({ history }) => {
     const [user, setUser] = React.useState({
-        name : "",
-        email : "",
-        password : "",
-        companyNum:""
+        name: "",
+        email: "",
+        password: "",
+        companyNum: ""
     });
 
     function handleInputChange(e) {
         e.preventDefault()
- 
+
         const { value, name } = e.target
 
         console.log(value, name)
 
         setUser({
             ...user,
-            [name] : value
+            [name]: value
         })
     }
 
     const onSubmit = (e) => {
         e.preventDefault()
-            console.log(JSON.stringify(user))
+        console.log(JSON.stringify(user))
         fetch("http://192.168.0.33:3001/user/company", {
             mode: 'cors',
             method: "POST",
@@ -37,27 +37,33 @@ const CompanyJoin = ({ history }) => {
             },
             body: JSON.stringify(user)
         })
-        .then((resp) => {
-            console.log(resp.status)
-            if(resp.status === 200) {
-                alert("회원가입 성공");
-                console.log("C")
-                history.push('./MainPage')
-            } else {
-                alert("회원가입 실패");
-            }
-        
-        })
-        .catch((error) => {
-            console.log(error)
-        });
+            .then((resp) => {
+                console.log(resp.status)
+                if (resp.status === 200) {
+                    alert("회원가입 성공");
+                    console.log("C")
+                    history.push('./MainPage')
+                } else {
+                    alert("회원가입 실패");
+                }
+
+            })
+            .catch((error) => {
+                console.log(error)
+            });
     }
-        
+
     return (
         <div className="App">
             <header className="app-header">
-                <h1>회원가입</h1>
-                <h2>회원가입 하세요!</h2>
+                <Image
+                    className="cc-carousel-item-image"
+                    src={require("../images/VART_.png")}
+                    width="300px"
+                    alt="First slide"
+                    fluid
+                    href="/"
+                />
                 <hr></hr>
             </header>
             <div className="app-body">
@@ -66,6 +72,7 @@ const CompanyJoin = ({ history }) => {
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Name</Form.Label>
                             <Form.Control
+                                className="LoginBox"
                                 type="name"
                                 placeholder="Enter name"
                                 onChange={handleInputChange}
@@ -80,6 +87,7 @@ const CompanyJoin = ({ history }) => {
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
+                                className="LoginBox"
                                 type="email"
                                 placeholder="Enter email"
                                 onChange={handleInputChange}
@@ -95,6 +103,7 @@ const CompanyJoin = ({ history }) => {
                         <Form.Group controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
+                                className="LoginBox"
                                 type="password"
                                 placeholder="Password"
                                 onChange={handleInputChange}
@@ -104,10 +113,11 @@ const CompanyJoin = ({ history }) => {
                             />
                         </Form.Group>
 
-                        
+
                         <Form.Group controlId="formBasicPassword">
                             <Form.Label>Companynum</Form.Label>
                             <Form.Control
+                                className="LoginBox"
                                 type="companynum"
                                 placeholder="CompanyNum"
                                 onChange={handleInputChange}
