@@ -18,8 +18,8 @@ const ControlledCarouselBanel = ({ history }) => {
         <Image
           className="image"
           src={require("../../images/VART_Main1.png")}
-          width="600px"
-          heigh="600px"
+          width="400px"
+          heigh="400px"
           alt="First slide"
           fluid
         />
