@@ -1,12 +1,12 @@
 import React from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Image, Button, Container, Form } from "react-bootstrap";
 
 import "../App.css";
 
 const CompanyLogin = ({ history }) => {
   const [userEmail, setUserEmail] = React.useState("");
   const [pwd, setUserPwd] = React.useState("");
-  
+
   const sumbitLogin = React.useCallback((userEmail, pwd) => {
     const data = {
       email: userEmail,
@@ -20,24 +20,24 @@ const CompanyLogin = ({ history }) => {
       credentials: "include",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
-      
+
       },
     })
       .then((resp) => {
         console.log(resp.headers);
         console.log(resp);
         return resp.json();
-        
+
       })
       .then((data) => {
         console.log(data)
-   
+
         if (!data.token) {
           alert(data.message)
           history.push('/CompanyLogin')
         } else {
           localStorage.setItem("user", data.token)
-          window.location.href='/'
+          window.location.href = '/'
         }
       })
       .catch((error) => {
@@ -49,12 +49,21 @@ const CompanyLogin = ({ history }) => {
     <div className="App">
       {/* <button onClick={e => sample()} >sample</button> */}
       <header className="app-header">
+        <Image
+          className="cc-carousel-item-image"
+          src={require("../images/VART_.png")}
+          width="300px"
+          alt="First slide"
+          fluid
+          href="/"
+        />
         <h1>Login</h1>
         <h2>로그인하세요!</h2>
         <hr></hr>
       </header>
       <div className="app-body">
         <Container>
+
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>

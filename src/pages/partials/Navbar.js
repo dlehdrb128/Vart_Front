@@ -41,8 +41,8 @@ function Navbar() {
                     </Nav>
 
                     <Nav>
-                  <Nav.Link href="../CompanyLogin">로그인</Nav.Link> :
-                         <Nav.Link href="../Join">회원가입</Nav.Link>    
+                        <Nav.Link href="../CompanyLogin">로그인</Nav.Link>
+                        <Nav.Link href="../Join">회원가입</Nav.Link>
                     </Nav>
                 </BSNavbar.Collapse>
             </BSNavbar>
