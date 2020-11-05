@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo  } from "react";
-import { Container, Table } from "react-bootstrap";
+import React, { useState, useEffect, useMemo } from "react";
+import { Image, Container, Table } from "react-bootstrap";
 import NewDisclosureListItem from "../components/NewDisclosureList/NewDisclosureListItem"
 import Pagination from '../components/Pagination'
 
@@ -12,15 +12,15 @@ function DisclosureScreen() {
 
     const pageLimit = 9;
     const paginationLimite = 5;
-      // list length
-  const totalLength = useMemo(() => {
-    return users.length;
-  }, [users]);
+    // list length
+    const totalLength = useMemo(() => {
+        return users.length;
+    }, [users]);
 
-  // page length
-  const totalPageNum = useMemo(() => {
-    return Math.ceil(totalLength / pageLimit);
-  }, [totalLength, pageLimit]);
+    // page length
+    const totalPageNum = useMemo(() => {
+        return Math.ceil(totalLength / pageLimit);
+    }, [totalLength, pageLimit]);
 
 
     useEffect(() => {
@@ -35,12 +35,12 @@ function DisclosureScreen() {
                     return res.json();
                 } else {
                     const error = new Error(res.error);
-                    throw error; 
+                    throw error;
                 }
             })
             .then((result) => {
                 if (result) {
-                    result.sort((a,b)=>{
+                    result.sort((a, b) => {
                         return b.no - a.no;
                     })
                     setUsers(result);
@@ -55,6 +55,20 @@ function DisclosureScreen() {
 
     return (
         <div className="app-body">
+            <div className="App">
+                <header className="app-header">
+                    <Image
+                        className="cc-carousel-item-image"
+                        src={require("../images/VART_.png")}
+                        width="300px"
+                        height="200px"
+                        alt="First slide"
+                        fluid
+                        href="/" />
+                </header>
+                <hr></hr>
+            </div>
+
             <Container>
                 <div>
                     <Table responsive="sm">

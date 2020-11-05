@@ -1,10 +1,18 @@
 import React from "react";
 import "../App.css";
-import {  Card,  Accordion, Container } from "react-bootstrap";
+import { Image, Card, Accordion, Container } from "react-bootstrap";
 const Faq = ({ history }) => {
   return (
     <div className="App">
       <header className="app-header">
+        <Image
+          className="cc-carousel-item-image"
+          src={require("../images/VART_.png")}
+          width="300px"
+          height="200px"
+          alt="First slide"
+          fluid
+          href="/" />
         <div>고객센터</div>
       </header>
       <div className="faq-body">
