@@ -1,0 +1,51 @@
+.ccu-body {
+    background-color: white;
+    /* margin: 32px auto 0; */
+    font-size: 11px;
+    width: 70%;
+    /* 구간별 하단 여백 */
+    /* margin-bottom: 10px; */
+    padding: 10px 10px 1px 10px;
+  }
+  .ccu-body-title {
+    /* margin: 32px auto 0; */
+    margin: 20px 50px 0px 0px;
+    font-size: 20px;
+  }
+.ccu-form-button{
+    margin: 20px 50px 20px 0px;
+}
+
+.ccu-form-label{
+    text-align: left;
+    margin-left:5px;
+    font-size: 12px;
+}
+
+/* 입력바 스타일 */
+.ccu-form-input{
+    text-align: left;
+    margin-left:5px;
+    font-size: 12px;
+}
+.ccu-form-label-text{
+    text-align: left;
+    margin-left:5px;
+}
+
+
+
+
+
+
+@media (min-width: 576px){
+    .ccu-form-label {
+        margin-left:0;
+        text-align: right;
+    }
+
+    .ccu-form-label-text {
+        margin-left:0;
+        text-align: right;
+    }
+}

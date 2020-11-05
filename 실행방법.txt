@@ -1,0 +1,19 @@
+
+['react-scripts'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.]
+오류가 나올시
+npm install(or npm i)를 입력해서 업데이트 해야함
+npm start
+
+
+
+2개를 만든다
+하나는 package.json 파일 열어 port 다른걸로
+yarn, nodejs 설치
+(https://classic.yarnpkg.com/en/docs/install#windows-stable)
+
+yarn install 시행 후 노드모듈설치
+
+yarn start로 웹서버 수행
+
+ 
