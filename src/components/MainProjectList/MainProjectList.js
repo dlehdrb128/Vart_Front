@@ -77,7 +77,7 @@ function ProjectItemScreen() {
             </tbody>
           </Table>
         </div>
-        <Pagination active={loc} last={totalPageNum} paginationLimite={paginationLimite} onClick={(index) => setLoc(index)} />
+        <Pagination totalLength={totalLength} active={loc} last={totalPageNum} paginationLimite={paginationLimite} onClick={(index) => setLoc(index)} />
       </Container>
     </div>
   );

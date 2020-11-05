@@ -1,7 +1,7 @@
 import React from "react";
 import { Pagination as BSPagination } from "react-bootstrap";
 
-const Pagination = ({ active, last, paginationLimite, onClick }) => {
+const Pagination = ({ totalLength ,active, last, paginationLimite, onClick }) => {
     return (
         <BSPagination>
             {(() => {
@@ -19,42 +19,44 @@ const Pagination = ({ active, last, paginationLimite, onClick }) => {
             })()}
 
             {(() => {
-                let length = 1;
-                let start = 1;
+                if(totalLength > 0){
+                    let length = 1;
+                    let start = 1;
 
-                if (
-                    Math.ceil(active / paginationLimite) <
-                    Math.ceil(last / paginationLimite)
-                ) {
-                    length = Math.ceil(active / paginationLimite) * paginationLimite;
-                    start = length - paginationLimite + 1;
-                } else {
-                    length = last;
-                    start =
-                        last % paginationLimite === 0
-                            ? last - paginationLimite + 1
-                            : last - (last % paginationLimite) + 1;
-                }
-
-                let array = new Array();
-
-                for (let index = start; index <= length; index++) {
-                    if (index === active) {
-                        array.push(
-                            <BSPagination.Item onClick={() => onClick(index)} active>
-                                {index}
-                            </BSPagination.Item>
-                        );
+                    if (
+                        Math.ceil(active / paginationLimite) <
+                        Math.ceil(last / paginationLimite)
+                    ) {
+                        length = Math.ceil(active / paginationLimite) * paginationLimite;
+                        start = length - paginationLimite + 1;
                     } else {
-                        array.push(
-                            <BSPagination.Item onClick={() => onClick(index)}>
-                                {index}
-                            </BSPagination.Item>
-                        );
+                        length = last;
+                        start =
+                            last % paginationLimite === 0
+                                ? last - paginationLimite + 1
+                                : last - (last % paginationLimite) + 1;
                     }
-                }
 
-                return array;
+                    let array = new Array();
+
+                    for (let index = start; index <= length; index++) {
+                        if (index === active) {
+                            array.push(
+                                <BSPagination.Item onClick={() => onClick(index)} active>
+                                    {index}
+                                </BSPagination.Item>
+                            );
+                        } else {
+                            array.push(
+                                <BSPagination.Item onClick={() => onClick(index)}>
+                                    {index}
+                                </BSPagination.Item>
+                            );
+                        }
+                    }
+
+                    return array;
+                }
             })()}
 
             {(() => {
