@@ -41,12 +41,7 @@ function Navbar() {
                     </Nav>
 
                     <Nav>
-                    {token===null ? <Nav.Link href="../CompanyLogin">로그인</Nav.Link> : <Nav.Link onClick={(e)=>{
-                                    e.preventDefault();
-                                    localStorage.removeItem('user')
-                
-                                    window.location.href='/'
-                                }}>로그아웃</Nav.Link>}
+                  <Nav.Link href="../CompanyLogin">로그인</Nav.Link> :
                          <Nav.Link href="../Join">회원가입</Nav.Link>    
                     </Nav>
                 </BSNavbar.Collapse>
