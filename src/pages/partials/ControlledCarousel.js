@@ -14,13 +14,6 @@ const ControlledCarouselBanel = ({ history }) => {
           <h1><div className="MainFont">VART</div></h1>
           <h3>글로벌 가상자산 공시 플랫폼</h3>
           <p>업계를 선도하는 파트너들과 함께합니다.</p>
-          <hr></hr>
-          <Link to="/Project">
-            <Button>가상자산</Button>
-          </Link>
-          <Link to="/Newdisclosure">
-            <Button>공시</Button>
-          </Link>
         </div>
         <Image
           className="image"
