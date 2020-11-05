@@ -35,14 +35,16 @@ const About = ({ history }) => {
                   <Card.Text>
                     블록체인 전자공시시스템 VART 개발 백 엔드 담당 조장
                   </Card.Text>
-                  <Image
-                    className="cc-carousel-item-image"
-                    src={require("../images/githublogo.png")}
-                    width="300px"
-                    height="200px"
-                    alt="First slide"
-                    fluid
-                    onclick={"https://github.com/jyj716"} />
+                  <a href="https://github.com/jyj716">
+                    <Image
+                      className="cc-carousel-item-image"
+                      src={require("../images/githublogo.png")}
+                      width="300px"
+                      height="200px"
+                      alt="First slide"
+                      fluid>
+                    </Image>
+                  </a>
                 </Card.Body>
               </Card>
             </td>
@@ -53,14 +55,16 @@ const About = ({ history }) => {
                   <Card.Text>
                     블록체인 전자공시시스템 VART 개발 하이퍼 레저 담당 팀원
                   </Card.Text>
-                  <Image
-                    className="cc-carousel-item-image"
-                    src={require("../images/githublogo.png")}
-                    width="300px"
-                    height="200px"
-                    alt="First slide"
-                    fluid
-                    href="/" />
+                  <a href="https://github.com/dlehdrb128">
+                    <Image
+                      className="cc-carousel-item-image"
+                      src={require("../images/githublogo.png")}
+                      width="300px"
+                      height="200px"
+                      alt="First slide"
+                      fluid>
+                    </Image>
+                  </a>
                 </Card.Body>
               </Card>
             </td>
@@ -71,14 +75,16 @@ const About = ({ history }) => {
                   <Card.Text>
                     블록체인 전자공시시스템 VART 개발 프론트 엔드 담당 팀원
                   </Card.Text>
-                  <Image
-                    className="cc-carousel-item-image"
-                    src={require("../images/githublogo.png")}
-                    width="300px"
-                    height="200px"
-                    alt="First slide"
-                    fluid
-                    href="/" />
+                  <a href="https://github.com/danimothman">
+                    <Image
+                      className="cc-carousel-item-image"
+                      src={require("../images/githublogo.png")}
+                      width="300px"
+                      height="200px"
+                      alt="First slide"
+                      fluid>
+                    </Image>
+                  </a>
                 </Card.Body>
               </Card>
             </td>
