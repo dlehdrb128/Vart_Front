@@ -1,18 +1,18 @@
 import React from 'react'
 import { Navbar as BSNavbar, Image, Nav, NavDropdown } from 'react-bootstrap';
 import '../../App.css';
-// import Navbar from 'react-bootstrap/';
 
 function Navbar() {
     const [token, setToken] = React.useState(null);
-
+    const [user, setUser] = React.useState({
+        name : "",
+        email : "",
+        permission: ""
+    })
 
     const watchToken = () => {
-        console.log("A")
-        console.log(localStorage.getItem('user'));
         setToken(localStorage.getItem('user'))
     }
-
 
     React.useEffect(() => {
         window.addEventListener('storage', watchToken);
@@ -20,11 +20,35 @@ function Navbar() {
         return () => window.removeEventListener('storage', watchToken)
     }, [token])
 
-    return (
+    React.useEffect(() => {
+        const token = localStorage.getItem('user')
 
+        if(token !== null) {
+            fetch('http://192.168.0.33:3001/user/info', {
+                mode:"cors",    
+                method: "GET",
+                credentials: "include",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization : `Bearer ${token}`
+                }
+            })
+            .then((resp)=>{
+                if(resp.status === 200){
+                    return resp.json()         
+                }
+            })
+            .then((data)=>{
+                setUser(data.user)
+        })
+        }
+
+    },[token])
+
+    return (
         <div>
             {/* <Container> */}
-            <BSNavbar collapseOnSelect expand="lg" bg="white" variant="blue">
+            <BSNavbar collapseOnSelect expand="lg" variant="blue"className="bg">
                 <BSNavbar.Brand href="/">
                     <Image
                         className="cc-carousel-item-image"
@@ -37,11 +61,12 @@ function Navbar() {
 
                 <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
                 <BSNavbar.Collapse id="responsive-navbar-nav" className="App-partials">
-                    <Nav className="mr-auto">
+                    
                         <Nav.Link href="../About">소개</Nav.Link>
 
                         <Nav.Link href="../Service">서비스</Nav.Link>
 
+                        {token !== null && user.permission === 'company' ? (
                         <NavDropdown title="가상자산" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
                             <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
@@ -49,12 +74,20 @@ function Navbar() {
                             <NavDropdown.Item href="../projectItemCreate">프로필 등록</NavDropdown.Item>
                             <NavDropdown.Item href="../DisclosureCreate">공시 등록</NavDropdown.Item>
                         </NavDropdown>
+                        ) : (
+                        <NavDropdown title="가상자산" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
+                            <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
+                        </NavDropdown>
+                        )}
 
                         <NavDropdown title="고객센터" id="collasible-nav-dropdown2">
                             <NavDropdown.Item href="../Announcement">공지사항</NavDropdown.Item>
                             <NavDropdown.Item href="../Faq">고객센터</NavDropdown.Item>
                         </NavDropdown>
+                        <Nav className="mr-auto">
                     </Nav>
+
 
                     {token === null ? (
                         <Nav>
@@ -75,7 +108,6 @@ function Navbar() {
 }
 
 export default Navbar;
-
 
 // 상단메뉴
 // 적용링크 예시
