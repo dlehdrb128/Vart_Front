@@ -5,8 +5,8 @@ import '../../App.css';
 function Navbar() {
     const [token, setToken] = React.useState(null);
     const [user, setUser] = React.useState({
-        name : "",
-        email : "",
+        name: "",
+        email: "",
         permission: ""
     })
 
@@ -23,36 +23,32 @@ function Navbar() {
     React.useEffect(() => {
         const token = localStorage.getItem('user')
 
-        if(token !== null) {
+        if (token !== null) {
             fetch('http://192.168.0.33:3001/user/info', {
-                mode:"cors",    
+                mode: "cors",
                 method: "GET",
                 credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization : `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             })
-            .then((resp)=>{
-                if(resp.status === 200){
-                    return resp.json()         
-                }
-            })
-            .then((data)=>{
-                setUser(data.user)
-        })
+                .then((resp) => {
+                    if (resp.status === 200) {
+                        return resp.json()
+                    }
+                })
+                .then((data) => {
+                    setUser(data.user)
+                })
         }
 
-    },[token])
+    }, [token])
 
     return (
         <div>
             {/* <Container> */}
-<<<<<<< HEAD
-            <BSNavbar collapseOnSelect expand="lg" variant="blue"className="bg">
-=======
             <BSNavbar collapseOnSelect expand="lg" variant="blue" className="bg">
->>>>>>> 36410a4d035cdd0de416d086057e4f401640f04f
                 <BSNavbar.Brand href="/">
                     <Image
                         className="cc-carousel-item-image"
@@ -62,28 +58,15 @@ function Navbar() {
                         fluid
                         href="/" />
                 </BSNavbar.Brand>
-                <NavDropdown title="가상자산" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
-                    <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="../projectItemCreate">프로필 등록</NavDropdown.Item>
-                    <NavDropdown.Item href="../DisclosureCreate">공시 등록</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="../About">소개</Nav.Link>
-                <Nav.Link href="../Service">서비스</Nav.Link>
-                <NavDropdown title="고객센터" id="collasible-nav-dropdown2">
-                    <NavDropdown.Item href="../Announcement">공지사항</NavDropdown.Item>
-                    <NavDropdown.Item href="../Faq">고객센터</NavDropdown.Item>
-                </NavDropdown>
+
                 <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
                 <BSNavbar.Collapse id="responsive-navbar-nav" className="App-partials">
-<<<<<<< HEAD
-                    
-                        <Nav.Link href="../About">소개</Nav.Link>
 
-                        <Nav.Link href="../Service">서비스</Nav.Link>
+                    <Nav.Link href="../About">소개</Nav.Link>
 
-                        {token !== null && user.permission === 'company' ? (
+                    <Nav.Link href="../Service">서비스</Nav.Link>
+
+                    {token !== null && user.permission === 'company' ? (
                         <NavDropdown title="가상자산" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
                             <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
@@ -91,25 +74,21 @@ function Navbar() {
                             <NavDropdown.Item href="../projectItemCreate">프로필 등록</NavDropdown.Item>
                             <NavDropdown.Item href="../DisclosureCreate">공시 등록</NavDropdown.Item>
                         </NavDropdown>
-                        ) : (
-                        <NavDropdown title="가상자산" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
-                            <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
-                        </NavDropdown>
+                    ) : (
+                            <NavDropdown title="가상자산" id="collasible-nav-dropdown">
+                                <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>
+                                <NavDropdown.Item href="../Newdisclosure">공시</NavDropdown.Item>
+                            </NavDropdown>
                         )}
 
-                        <NavDropdown title="고객센터" id="collasible-nav-dropdown2">
-                            <NavDropdown.Item href="../Announcement">공지사항</NavDropdown.Item>
-                            <NavDropdown.Item href="../Faq">고객센터</NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav className="mr-auto">
-                    </Nav>
-
-
-=======
+                    <NavDropdown title="고객센터" id="collasible-nav-dropdown2">
+                        <NavDropdown.Item href="../Announcement">공지사항</NavDropdown.Item>
+                        <NavDropdown.Item href="../Faq">고객센터</NavDropdown.Item>
+                    </NavDropdown>
                     <Nav className="mr-auto">
                     </Nav>
->>>>>>> 36410a4d035cdd0de416d086057e4f401640f04f
+
+
                     {token === null ? (
                         <Nav>
                             <Nav.Link href="../CompanyLogin">로그인</Nav.Link>
