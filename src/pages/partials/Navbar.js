@@ -52,7 +52,6 @@ function Navbar() {
     }, [token])
 
     return (
-        <div>
         
             <BSNavbar collapseOnSelect expand="lg" variant="blue" className="bg">
                 <BSNavbar.Brand href="/">
@@ -105,7 +104,6 @@ function Navbar() {
                             </Nav>)}
                 </BSNavbar.Collapse>
             </BSNavbar>
-        </div>
     )
 }
 

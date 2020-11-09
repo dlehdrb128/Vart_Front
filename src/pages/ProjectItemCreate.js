@@ -122,22 +122,17 @@ const ProjectItemCreate = ({ history }) => {
     });
 
     return (
-        <Container style={{ marginRight: "450px" }}>
-            <div>
-                <Form.Group as={Row} controlId="" className="ccu-body-title">
-                    <Form.Label column sm={3} style={{ marginTop: "80px" }}>토큰 정보</Form.Label>
-                    <Col sm={9}>
-                        <Form.Text>
-
-                        </Form.Text>
-                    </Col>
-                </Form.Group>
-            </div>
-            <div className="app-body">
-
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">토큰이름</Form.Label>
-                    <Col sm={9}>
+                <div className="ccu-body">
+                    <div className="app-header" >프로필 등록</div>
+                    
+                    <Container style={{maxWidth:"700px", marginBottom:"20px"}}>
+                    <Form.Group   className="ccu-body-title">
+                        <div>
+                    <Form.Label  className="">토큰 종류</Form.Label>   
+                        </div>                 
+            
+               
+                    <Form.Label  className="ccu-form-label">토큰이름</Form.Label>
                         <Form.Control
                             name="name"
                             placeholder="토큰이름"
@@ -145,36 +140,25 @@ const ProjectItemCreate = ({ history }) => {
                             value={token.name}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">프로젝트종류</Form.Label>
-                    <Col sm={9}>
+                        
+              
+              
+                    <Form.Label  className="ccu-form-label">프로젝트종류</Form.Label>
                         <Form.Control
                             name="projectType"
                             placeholder="프로젝트종류"
                             onChange={onChangeToken}
                             value={token.projectType}
                             className="ccu-form-input"
-                        />
-                    </Col>
+                        /> 
                 </Form.Group>
-            </div>
 
-            <div>
-                <Form.Group as={Row} controlId="" className="ccu-body-title">
-                    <Form.Label column sm={3} className="">회사정보</Form.Label>
-                    <Col sm={9}>
-                        <Form.Text>
 
-                        </Form.Text>
-                    </Col>
-                </Form.Group>
-            </div>
-            <div className="app-body">
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">회사이름</Form.Label>
-                    <Col sm={9}>
+                <Form.Group   className="ccu-body-title">
+                    <div>
+                    <Form.Label  className="">회사정보</Form.Label>
+                    </div>
+                    <Form.Label  className="ccu-form-label">회사이름</Form.Label>
                         <Form.Control
                             name="name"
                             placeholder="회사이름"
@@ -182,11 +166,7 @@ const ProjectItemCreate = ({ history }) => {
                             value={profile.name}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">회사설립일</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">회사설립일</Form.Label>
                         <Form.Control
                             name="establishmentDate"
                             placeholder="회사설립일"
@@ -194,11 +174,7 @@ const ProjectItemCreate = ({ history }) => {
                             value={profile.establishmentDate}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">회사위치</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">회사위치</Form.Label>
                         <Form.Control
                             name="location"
                             placeholder="회사위치"
@@ -206,36 +182,20 @@ const ProjectItemCreate = ({ history }) => {
                             value={profile.location}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">법인 관할자 위치</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">법인 관할자 위치</Form.Label>
                         <Form.Control
                             name="jurisdiction"
                             placeholder="법인 관할자(Corporate jurisdiction) 위치"
                             onChange={onChangeProfile}
                             value={profile.jurisdiction}
                             className="ccu-form-input"
-                        />
-                    </Col>
+                        />                    
                 </Form.Group>
-            </div>
-
-            <div>
-                <Form.Group as={Row} controlId="" className="ccu-body-title">
-                    <Form.Label column sm={3} className="">경영진</Form.Label>
-                    <Col sm={9}>
-                        <Form.Text>
-
-                        </Form.Text>
-                    </Col>
-                </Form.Group>
-            </div>
-            <div className="app-body">
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">경영진이름</Form.Label>
-                    <Col sm={9}>
+                <Form.Group   className="ccu-body-title">
+                <div>
+                    <Form.Label  className="">경영진</Form.Label>
+                </div>
+                    <Form.Label  className="ccu-form-label">경영진이름</Form.Label>
                         <Form.Control
                             name="name"
                             placeholder="경영진이름"
@@ -243,11 +203,7 @@ const ProjectItemCreate = ({ history }) => {
                             value={executive.name}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">경영진학력</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">경영진학력</Form.Label>
                         <Form.Control
                             name="education"
                             placeholder="경영진학력"
@@ -255,36 +211,20 @@ const ProjectItemCreate = ({ history }) => {
                             value={executive.education}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">경영진경력</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">경영진경력</Form.Label>
                         <Form.Control
                             name="experience"
                             placeholder="경영진경력"
                             onChange={onChangeExecutive}
                             value={executive.experience}
                             className="ccu-form-input"
-                        />
-                    </Col>
+                        />                    
                 </Form.Group>
-            </div>
-
-            <div>
-                <Form.Group as={Row} controlId="" className="ccu-body-title">
-                    <Form.Label column sm={3} className="">개발자리더</Form.Label>
-                    <Col sm={9}>
-                        <Form.Text>
-
-                        </Form.Text>
-                    </Col>
-                </Form.Group>
-            </div>
-            <div className="app-body">
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">개발자이름</Form.Label>
-                    <Col sm={9}>
+                <Form.Group   className="ccu-body-title">
+                <div>
+                    <Form.Label  className="">개발자리더</Form.Label>
+                </div>    
+                    <Form.Label  className="ccu-form-label">개발자이름</Form.Label>
                         <Form.Control
                             name="name"
                             placeholder="개발자이름"
@@ -292,11 +232,7 @@ const ProjectItemCreate = ({ history }) => {
                             value={developerleader.name}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">개발자학력</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">개발자학력</Form.Label>
                         <Form.Control
                             name="education"
                             placeholder="개발자학력"
@@ -304,25 +240,19 @@ const ProjectItemCreate = ({ history }) => {
                             value={developerleader.education}
                             className="ccu-form-input"
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">개발자경력</Form.Label>
-                    <Col sm={9}>
+                    <Form.Label  className="ccu-form-label">개발자경력</Form.Label>
                         <Form.Control
                             name="experience"
                             placeholder="개발자경력"
                             onChange={onChangeDeveloperleader}
                             value={developerleader.experience}
                             className="ccu-form-input"
-                        />
-                    </Col>
+                        />                    
                 </Form.Group>
+                <Button className="ccu-form-button" onClick={onCreate} >공시 정보 등록</Button>
+            </Container>
             </div>
-            <div>
-                <Button className="ccu-form-button" style={{ marginLeft: "580px" }} onClick={onCreate} >공시 정보 등록</Button>
-            </div>
-        </Container>
+
     )
 };
 

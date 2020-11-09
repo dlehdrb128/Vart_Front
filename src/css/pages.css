@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .App-background-color {
@@ -13,17 +13,22 @@
 } */
 
 .app-header {
+  
   background-color: white;
-  height: 300px;
+  height: 390px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 40px;
   color: black;
   padding: 106px 0 53px;
+  overflow: hidden;
+  
+  
 }
+
 .app-body {
   background-color: white;
   margin: 45px auto 0;
@@ -75,10 +80,10 @@
 
 .MainButton{
   margin-top:100px;
-  margin-left:100px;
+  margin-left:120px;
   max-height: 600px;
   max-width: 2000px;
-  overflow: hidden;
+  
   width:200px;
   position: absolute;
   background-size: cover;
@@ -124,13 +129,15 @@
 width:300px;
 height:300px;
 }
+
 .bg{
   position: fixed;
-  background-color: rgb(100, 255, 255) !important;
+  background:#ffffff;
   top:0;
   left: 0;
   right: 0;
   border-bottom: solid 1px rgb(179, 178, 178);
+  z-index: 1;
 
   }
 .About{
@@ -157,3 +164,5 @@ width: 300px;
 height: 150px;
 
 }
+
+

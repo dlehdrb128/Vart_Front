@@ -62,7 +62,7 @@ const NomalJoin = ({ history }) => {
                     fluid
                     href="/"
                 />
-                <hr></hr>
+
             </header>
             <div className="app-body">
                 <Container>

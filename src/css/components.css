@@ -1,11 +1,11 @@
 .bil-form{
-    font-size: 12px;
+    font-size: 18px;
     padding: 10px 0px;
 }
 
 .ccu-body {
     background-color: white;
-    /* margin: 32px auto 0; */
+    margin:auto ;
     font-size: 11px;
     width: 70%;
     /* 구간별 하단 여백 */
@@ -14,19 +14,13 @@
 }
 
 .ccu-body-title {
-    /* margin: 32px auto 0; */
-    margin: 20px 20px 0px 150px;
-    font-size: 20px;
+    margin-bottom: 30px;
+    font-size: 22px;
 }
 
 .ccu-form-button{
+    width: 100%;
     margin: 20px 50px 20px 0px;
-}
-
-.ccu-form-label{
-    text-align: left;
-    margin-left:5px;
-    font-size: 12px;
 }
 
 /* 입력바 스타일 */
@@ -34,6 +28,7 @@
     text-align: left;
     margin-left:5px;
     font-size: 12px;
+    display: inline-block;
 }
 
 .ccu-form-label-text{
@@ -43,8 +38,10 @@
 
 @media (min-width: 576px){
     .ccu-form-label {
+        font-size: 18px;
         margin-left:0;
         text-align: right;
+        display: inline-block;
     }
 
     .ccu-form-label-text {

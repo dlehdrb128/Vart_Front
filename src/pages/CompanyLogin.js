@@ -47,7 +47,6 @@ const CompanyLogin = ({ history }) => {
 
   return (
     <div className="App">
-      {/* <button onClick={e => sample()} >sample</button> */}
       <header className="app-header">
         <Image
           style={{ right: "500px" }}

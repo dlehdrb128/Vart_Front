@@ -66,10 +66,9 @@ function DisclosureScreen() {
                         fluid
                         href="/" />
                 </header>
-                <hr></hr>
 
             <Container>
-                <div>
+                <div className="app-body">
                     <Table responsive="sm" style={{ textAlign: "center" }}>
                         <thead className="table-font-title">
                             <tr>

@@ -20,7 +20,7 @@ const Faq = () => {
          </header>
   
       <div className="faq-body">
-        <Container>
+        <Container style={{width:"800px"}}>
           <Accordion defaultActiveKey="0">
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="0">
@@ -31,10 +31,6 @@ const Faq = () => {
               </Accordion.Collapse>
             </Card>
           </Accordion>
-        </Container>
-      </div>
-      <div className="faq-body">
-        <Container>
           <Accordion defaultActiveKey="0">
             <Card>
               <Accordion.Toggle as={Card.Header} eventKey="0">

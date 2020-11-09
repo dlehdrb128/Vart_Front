@@ -18,7 +18,7 @@ const Announcement = () => {
  
       </header>
       <div className="app-body">
-        <Container>
+        <Container style={{width:"800px"}}>
           <Card>
             <Card.Header>
               <Nav variant="tabs" defaultActiveKey="#first">

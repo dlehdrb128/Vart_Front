@@ -58,9 +58,8 @@ const DisclosureCreate = ({ history }) => {
     });
 
     return (
-        <div className="App">
-            <header className="app-header">
-                <div>공시등록</div>
+        <div >
+            <header className="app-header">               공시등록
             </header>
             <Container>
                 <CreateDisclosure

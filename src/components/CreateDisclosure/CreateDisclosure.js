@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button,  Form, Col, Row } from 'react-bootstrap';
+import { Button,  Form, Container } from 'react-bootstrap';
 
 import '../../css/components.css'
 
@@ -8,12 +8,11 @@ function CreateDisclosure({
     reportTitle, type, applicableDate, details, token, onChange, onCreate,
 }) {
     return (
-        <div className="">
-            <div className="ccu-body">
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">리포트 제목</Form.Label>
-                    <Col sm={9}>
-                        <Form.Control
+        <div >
+           <Container style={{maxWidth:"700px"}}>
+                <Form.Group >
+                    <Form.Label style={{fontSize:"20px"}} >리포트 제목</Form.Label>
+                            <Form.Control
                             name="reportTitle"
                             placeholder="토큰이름"
                             onChange={onChange}
@@ -26,11 +25,11 @@ function CreateDisclosure({
                                 e.target.placeholder = '리포트 제목'
                             }}
                         />
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">타입</Form.Label>
-                    <Col sm={9}>
+                 </Form.Group>
+
+                <Form.Group >
+                    <Form.Label style={{fontSize:"20px"}} >타입</Form.Label>
+                
                         <Form.Control
                             name="type"
                             placeholder="프로젝트종류"
@@ -44,13 +43,11 @@ function CreateDisclosure({
                                 e.target.placeholder = '프로젝트종류'
                             }}
                         />
-                    </Col>
-                </Form.Group>
-            </div>
-            <div className="ccu-body">
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">실행일</Form.Label>
-                    <Col sm={9}>
+                  </Form.Group>
+          
+                <Form.Group >
+                    <Form.Label style={{fontSize:"20px"}}>실행일</Form.Label>
+                
                         <Form.Control
                             name="applicableDate"
                             placeholder="실행일"
@@ -64,11 +61,11 @@ function CreateDisclosure({
                                 e.target.placeholder = '실행일'
                             }}
                         />
-                    </Col>
+                
                 </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">디테일 사항</Form.Label>
-                    <Col sm={9}>
+                <Form.Group >
+                    <Form.Label style={{fontSize:"20px"}}>디테일 사항</Form.Label>
+                
                         <Form.Control
                             name="details"
                             placeholder="디테일 사항"
@@ -82,11 +79,11 @@ function CreateDisclosure({
                                 e.target.placeholder = '디테일 사항'
                             }}
                         />
-                    </Col>
+                
                 </Form.Group>
-                <Form.Group as={Row} controlId="">
-                    <Form.Label column sm={3} className="ccu-form-label">토큰명</Form.Label>
-                    <Col sm={9}>
+                <Form.Group >
+                    <Form.Label style={{fontSize:"20px"}}>토큰명</Form.Label>
+                
                         <Form.Control
                             name="token"
                             placeholder="토큰명"
@@ -100,12 +97,13 @@ function CreateDisclosure({
                                 e.target.placeholder = '토큰명'
                             }}
                         />
-                    </Col>
+                
                 </Form.Group>
-            </div>
+      
             <div>
                 <Button className="ccu-form-button" onClick={onCreate} >공시 등록</Button>
             </div>
+            </Container>
         </div>
     )
 }
