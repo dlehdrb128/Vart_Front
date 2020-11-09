@@ -60,7 +60,7 @@ const CompanyLogin = ({ history }) => {
         />
       </header>
     
-        <Container>
+        <Container className="">
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Control

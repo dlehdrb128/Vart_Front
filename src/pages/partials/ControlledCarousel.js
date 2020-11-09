@@ -1,11 +1,10 @@
 import React from "react";
 import { Image, Container } from "react-bootstrap";
-
 import "../../css/pages.css"
 
 const ControlledCarouselBanel = () => {
   return (
-    <Container className="cc-max">
+    <Container className="app-header ">
       <Container>
         <div className="MainButton">
           <div className="MainFont"><h1>VART</h1></div>
@@ -18,8 +17,8 @@ const ControlledCarouselBanel = () => {
           width="400px"
           heigh="400px"
           alt="First slide"
-          fluid
-        />
+          fluid  />
+          
       </Container>
     </Container>
   );

@@ -12,7 +12,6 @@ export default function Header() {
             width="300px"
             height="200px"
             alt="First slide"
-            fluid
             href="/" />
       </header>
     )

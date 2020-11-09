@@ -5,8 +5,10 @@ import "../css/pages.css";
 
 const Faq = () => {
   return (
+    
     <div className="App">
-      <header className="app-header">
+        
+        <header className="app-header">
         <Image
           className="cc-carousel-item-image"
           src={require("../images/VART_.png")}
@@ -15,8 +17,8 @@ const Faq = () => {
           alt="First slide"
           fluid
           href="/" />
-        <div>고객센터</div>
-      </header>
+         </header>
+  
       <div className="faq-body">
         <Container>
           <Accordion defaultActiveKey="0">

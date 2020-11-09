@@ -53,11 +53,11 @@ function Navbar() {
 
     return (
         <div>
-            {/* <Container> */}
+        
             <BSNavbar collapseOnSelect expand="lg" variant="blue" className="bg">
                 <BSNavbar.Brand href="/">
                     <Image
-                        className="cc-carousel-item-image"
+                        className="navbar-logo"
                         src={require("../../images/VART_.png")}
                         width="80px"
                         alt="First slide"

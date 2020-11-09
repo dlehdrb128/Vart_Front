@@ -15,7 +15,7 @@ const Announcement = () => {
           alt="First slide"
           fluid
           href="/" />
-        <div>공지사항</div>
+ 
       </header>
       <div className="app-body">
         <Container>
