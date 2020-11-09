@@ -2,7 +2,8 @@ import React from 'react'
 import { Image, Button, Card, Container } from 'react-bootstrap';
 import manimage from "../images/man.jpg";
 import companyimage from "../images/company.png"
-import "../pages/partials/css/cc.css"
+
+import "../css/pages.css";
 
 function join() {
   return (

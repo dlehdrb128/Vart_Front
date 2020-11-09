@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import "../App.css";
 import { Table,  Container } from 'react-bootstrap';
 
-
-
+import "../css/pages.css";
 
 // react-router-dom에서 전달해주는 prop
-const DisclosureItem = ({ history, location, match }) => {
+const DisclosureItem = ({ match }) => {
 
     const [disclosure, setDisclosure] = useState({
         reportTitle: "",
@@ -20,17 +18,14 @@ const DisclosureItem = ({ history, location, match }) => {
         if (!match.params.no) {
             alert("잘못된 접근입니다.")
         }
-        console.log("A")
+        
         fetch(`http://192.168.0.33:3001/disclosure/query/${match.params.no}`, {
             method: 'GET',
         }).then((resp) => {
-            console.log(resp)
             return resp.json()
         }).then((disclosure) => {
-            console.log(disclosure)
             setDisclosure(disclosure)
         })
-        console.log("N")
     }, [])
 
     return (

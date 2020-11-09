@@ -1,8 +1,7 @@
 import React from 'react'
-// import { onFocus } from 'react-dom'
 import {  Button,  Form, Col, Row,  } from 'react-bootstrap';
-import './CreateDisclosure.css'
 
+import '../../css/components.css'
 
 function CreateDisclosure({
     // tokenlogo, 

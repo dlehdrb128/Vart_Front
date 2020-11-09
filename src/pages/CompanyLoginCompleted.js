@@ -1,5 +1,6 @@
 import React from "react";
-import "../App.css";
+
+import "../css/pages.css";
 
 const CompanyLoginCompleted = () => {
   return (

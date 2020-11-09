@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function MainProjectListItem({ company }) {
   return (
-    <tr className="table-font">
+    <tr >
       <td>
-        <Link className="bil-form"
+        <Link 
           to={{
             pathname: `/Project/${company.id}`,
           }}

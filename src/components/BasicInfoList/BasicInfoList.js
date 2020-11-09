@@ -1,17 +1,9 @@
 // useRef를 활용한 Component안에 변수 만들기
-import React, { useEffect } from "react";
-import {
-  Navbar,
-  Container,
-  Button,
-  FormControl,
-  Nav,
-  Form,
-  NavDropdown,
-  Table,
-} from "react-bootstrap";
-import "../../App.css";
-import "./BasicInfoList.css";
+import React from "react";
+import { Nav, Table } from "react-bootstrap";
+
+import '../../css/pages.css'
+import '../../css/components.css'
 
 const User = ({ user }) => {
   console.log(user);

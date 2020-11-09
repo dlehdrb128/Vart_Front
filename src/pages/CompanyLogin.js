@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Button, Container, Form } from "react-bootstrap";
 
-import "../App.css";
+import "../css/pages.css";
 
 const CompanyLogin = ({ history }) => {
   const [userEmail, setUserEmail] = React.useState("");
@@ -30,7 +30,7 @@ const CompanyLogin = ({ history }) => {
 
       })
       .then((data) => {
-        console.log(data)
+       
 
         if (!data.token) {
           alert(data.message)
@@ -57,34 +57,29 @@ const CompanyLogin = ({ history }) => {
           fluid
           href="/"
         />
-        <hr></hr>
       </header>
-      <div className="app-body">
+    
         <Container>
 
           <Form>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
               <Form.Control
                 className="LoginBox"
                 type="email"
-                placeholder="Enter email"
+                placeholder="아이디"
                 onChange={(e) => {
                   setUserEmail(e.target.value);
                 }}
                 value={userEmail}
               />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
+            
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
               <Form.Control
                 className="LoginBox"
                 type="password"
-                placeholder="Password"
+                placeholder="패스워드"
                 onChange={(e) => {
                   setUserPwd(e.target.value);
                 }}
@@ -106,7 +101,7 @@ const CompanyLogin = ({ history }) => {
           </Form>
         </Container>
       </div>
-    </div>
+ 
   );
 };
 

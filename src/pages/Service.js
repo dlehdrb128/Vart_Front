@@ -1,7 +1,9 @@
 import React from "react";
-import "../App.css";
 import { Image, Button, Card, Container } from "react-bootstrap";
-const Service = ({ history }) => {
+
+import "../css/pages.css";
+
+const Service = () => {
   return (
     <div className="App">
       <header className="app-header">
@@ -13,8 +15,9 @@ const Service = ({ history }) => {
           alt="First slide"
           fluid
           href="/" />
-        <div>서비스</div>
       </header>
+      <div>서비스</div>
+
       <div className="app-body">
         <Container>
           <tr>

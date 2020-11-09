@@ -1,7 +1,9 @@
 import React from "react";
-import "../App.css";
 import { Image, Button, Card, Container, Nav } from "react-bootstrap";
-const Announcement = ({ history }) => {
+
+import "../css/pages.css";
+
+const Announcement = () => {
   return (
     <div className="App">
       <header className="app-header">

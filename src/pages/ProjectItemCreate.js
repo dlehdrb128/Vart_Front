@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
-import "../App.css";
+import "../css/pages.css";
 
 const ProjectItemCreate = ({ history }) => {
   const [profile, setProfile] = useState({

@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 import CreateDisclosure from "../components/CreateDisclosure";
 
-import "../App.css";
+import "../css/pages.css";
 
 const DisclosureCreate = ({ history }) => {
     const [disclosure, setDisclosure] = useState({

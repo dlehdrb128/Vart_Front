@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Image, Container, Table } from "react-bootstrap";
+
 import NewDisclosureListItem from "../components/NewDisclosureList/NewDisclosureListItem"
 import Pagination from '../components/Pagination'
 
-import "../App.css";
-import "../components/NewDisclosureList/NewDisclosureList.css";
+import "../css/pages.css";
+import "../css/components.css";
 
 function DisclosureScreen() {
     const [users, setUsers] = useState([]);
@@ -54,7 +55,6 @@ function DisclosureScreen() {
     }, []);
 
     return (
-        <div className="app-body">
             <div className="App">
                 <header className="app-header">
                     <Image
@@ -67,7 +67,6 @@ function DisclosureScreen() {
                         href="/" />
                 </header>
                 <hr></hr>
-            </div>
 
             <Container>
                 <div>
@@ -90,7 +89,8 @@ function DisclosureScreen() {
                 <Pagination totalLength={totalLength} active={loc} last={totalPageNum} paginationLimite={paginationLimite} onClick={(index) => setLoc(index)} />
 
             </Container>
-        </div>
+            </div>
+
     );
 }
 

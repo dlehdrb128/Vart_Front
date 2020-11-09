@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Button, Container, Form } from "react-bootstrap";
 
-import "../App.css";
+import "../css/pages.css";
 
 const NomalJoin = ({ history }) => {
     const [user, setUser] = React.useState({
@@ -37,7 +37,6 @@ const NomalJoin = ({ history }) => {
             body: JSON.stringify(user)
         })
             .then((resp) => {
-                console.log(resp.status)
                 if (resp.status === 200) {
                     alert("회원가입 성공");
                     console.log("C")

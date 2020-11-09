@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import "../App.css";
 import { Table,  Container } from 'react-bootstrap';
 
 import NewDisclosureListItem from "../components/NewDisclosureList/NewDisclosureListItem"
-import "../components/NewDisclosureList/NewDisclosureList.css";
 
-
+import "../css/pages.css";
+import "../css/components.css";
 
 // react-router-dom에서 전달해주는 prop
-const DisclosureByTokenname = ({ history, location, match }) => {
-
+const DisclosureByTokenname = ({ match }) => {
     const [publicInfoList, setPublicInfoList] = useState([])
-    console.log(match)
 
     React.useEffect(() => {
         if (!match.params.tokenName) {

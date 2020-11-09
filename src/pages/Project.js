@@ -1,7 +1,10 @@
 import React from "react";
-import "../App.css";
-import MainProjectList from "../components/MainProjectList/MainProjectList";
 import { Image } from 'react-bootstrap';
+
+import MainProjectList from "../components/MainProjectList/MainProjectList";
+
+import "../css/pages.css";
+
 const Project = () => {
   return (
     <div className="App">

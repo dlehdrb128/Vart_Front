@@ -1,7 +1,9 @@
 import React from "react";
-import "../App.css";
+
 import ControlledCarousel from "./partials/ControlledCarousel";
 import MainProjectList from "../components/MainProjectList/MainProjectList";
+
+import "../css/pages.css";
 
 const MainPage = () => {
   return (

@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import "../App.css";
 import { Table, Button, Container } from 'react-bootstrap';
 
-
-
+import "../css/pages.css";
 
 // react-router-dom에서 전달해주는 prop
-const ProjectItem = ({ history, location, match }) => {
-
+const ProjectItem = ({ match }) => {
   const [company, setCompany] = useState({
     Developerleader: { education: "", experience: "", name: "" },
     Executive: { education: "", experience: "", name: "" },
@@ -19,8 +16,6 @@ const ProjectItem = ({ history, location, match }) => {
     name: ""
   })
 
-
-
   React.useEffect(() => {
     if (!match.params.id) {
       alert("잘못된 접근입니다.")
@@ -30,9 +25,7 @@ const ProjectItem = ({ history, location, match }) => {
     }).then((resp) => {
       return resp.json()
     }).then((data) => {
-      console.log(data)
       setCompany(data)
-
     })
   }, [])
 
@@ -40,7 +33,6 @@ const ProjectItem = ({ history, location, match }) => {
     <div className="App">
       <Container>
         <Table striped bordered hover>
-
           <tbody>
             <tr>
               <td colSpan="2">토큰 이름</td>

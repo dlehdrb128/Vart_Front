@@ -1,9 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import "./App.css";
 
 import MainPage from "./pages/MainPage";
-
 import projectItem from "./pages/ProjectItem";
 import Project from "./pages/Project";
 import About from "./pages/About";
@@ -29,6 +27,7 @@ const App = () => {
     <div>
       <Navbar />
       <div>
+        
         <Route exact path="/" component={MainPage} />
         <Route exact path="/project" component={Project} />
         <Route exact path="/project/:id" component={projectItem} />

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar as BSNavbar, Image, Nav, NavDropdown } from 'react-bootstrap';
-import '../../App.css';
+
+import '../../css/pages.css';
 
 function Navbar() {
     const [token, setToken] = React.useState(null);
@@ -36,7 +37,12 @@ function Navbar() {
                 .then((resp) => {
                     if (resp.status === 200) {
                         return resp.json()
+                    } else {
+                        if (resp.status === 401) {
+                            localStorage.removeItem('user')
+                        }
                     }
+
                 })
                 .then((data) => {
                     setUser(data.user)

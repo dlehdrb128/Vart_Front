@@ -4,8 +4,8 @@ import { Container, Table } from "react-bootstrap";
 import MainProjectListItem from "./MainProjectListItem";
 import Pagination from '../Pagination'
 
-import "../../App.css";
-import "./MainProjectList.css";
+import "../../css/pages.css";
+import '../../css/components.css'
 
 /*
   공시 정보 리스트 출력 경로

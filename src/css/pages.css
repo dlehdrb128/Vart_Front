@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.App-background-color {
+  background-color: #f8f9fa;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+.app-header {
+  background-color: white;
+  min-height: 50vh;
+  width: 100%;
+  /* margin: 32px auto 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+.app-body {
+  background-color: white;
+  margin: 45px auto 0;
+  margin-bottom: 24px;
+  /* width: 70%; */
+}
+
+.app-body-black {
+  background-color: #f8f9fa;
+  margin: 32px auto 0;
+  /* 구간별 하단 여백 */
+  margin-bottom: 12px;
+}
+
+.faq-body {
+  background-color: white;
+  width: 100%;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.announcement-form {
+  margin: 30px;
+}
+
+
+.service-form {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.table-font-title {
+  font-size: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+
+}
+
+.MainButton{
+  margin-top:100px;
+  margin-left:100px;
+  max-height: 600px;
+  max-width: 2000px;
+  overflow: hidden;
+  width:200px;
+  position: absolute;
+}
+
+.MainFont{
+  color: rgb(48, 45, 219);
+}
+
+.LoginBox{
+  max-width: 400px;
+  margin: auto;
+}
+
+.image{
+  margin-left: 700px;
+  max-height: 600px;
+  max-width: 2000px;
+  overflow: hidden;
+}
+
+.cc-carousel-item-image{
+  max-height: 400px;
+  max-width: 2000px;
+  margin-right: 80px;
+  overflow: hidden;
+}
+
+.cc-max{
+  max-height: 600px;
+  max-width: 1800px;
+  overflow: hidden;
+}
+
+.image-size {
+width:300px;
+height:300px;
+}
+
+.bg{
+position: fixed;
+background-color: rgb(255, 255, 255) !important;
+top:0;
+left: 0;
+right: 0;
+}
+
+.About{
+max-width: 2000px;
+max-height: 2000px;
+}
+
+.NavLog{
+top:0;
+left: 0;
+
+}
+
+/* Desktop */
+.service-card{
+    width:500px;
+    height:450px; 
+    align-items:center
+}
+
+/*  */
+.github{
+width: 300px;
+height: 150px;
+
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Button, Container, Form } from "react-bootstrap";
 
-import "../App.css";
+import "../css/pages.css";
 
 const CompanyJoin = ({ history }) => {
     const [user, setUser] = React.useState({
@@ -64,7 +64,6 @@ const CompanyJoin = ({ history }) => {
                     fluid
                     href="/"
                 />
-                <hr></hr>
             </header>
             <div className="app-body">
                 <Container>

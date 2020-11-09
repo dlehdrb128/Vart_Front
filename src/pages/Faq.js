@@ -1,7 +1,9 @@
 import React from "react";
-import "../App.css";
 import { Image, Card, Accordion, Container } from "react-bootstrap";
-const Faq = ({ history }) => {
+
+import "../css/pages.css";
+
+const Faq = () => {
   return (
     <div className="App">
       <header className="app-header">
