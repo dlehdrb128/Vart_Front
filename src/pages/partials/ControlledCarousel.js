@@ -1,16 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
 import { Image, Container } from "react-bootstrap";
 
 import "../../css/pages.css"
-=======
-import "../../App.css";
-import "./css/cc.css"
-
-// import TutorLogin from "./components/TutorLogin";
-
-import { Image, Container } from "react-bootstrap";
->>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
 
 const ControlledCarouselBanel = () => {
   return (

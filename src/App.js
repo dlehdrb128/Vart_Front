@@ -10,24 +10,20 @@ import Service from "./pages/Service";
 import DisclosureCreate from "./pages/DisclosureCreate";
 import projectItemCreate from "./pages/ProjectItemCreate";
 import CompanyLogin from "./pages/CompanyLogin";
-import CompanyLoginCompleted from "./pages/CompanyLoginCompleted";
 import DisclosureItem from "./pages/DisclosureItem"
 import Newdisclosure from "./pages/Newdisclosure";
 import DisclosureByTokenname from './pages/DisclosureByTokenname'
 import Join from './pages/join'
 import NomalJoin from './pages/nomalJoin'
 import CompanyJoin from './pages/CompanyJoin'
-// import projectItemList from './pages/projectItemList';
 import Faq from "./pages/Faq";
 import Navbar from "./pages/partials/Navbar";
 
 const App = () => {
-
   return (
     <div>
       <Navbar />
       <div>
-        
         <Route exact path="/" component={MainPage} />
         <Route exact path="/project" component={Project} />
         <Route exact path="/project/:id" component={projectItem} />
@@ -43,13 +39,6 @@ const App = () => {
         <Route exact path="/projectItemCreate" component={projectItemCreate} />
         <Route exact path="/CompanyLogin" component={CompanyLogin} />
         <Route exact path="/Newdisclosure" component={Newdisclosure} />
-        
-        <Route
-          exact
-          path="/CompanyLoginCompleted"
-          component={CompanyLoginCompleted}
-        />
-        {/* <Route exact path="/projectItemList" component={projectItemList} /> */}
         <Route exact path="/Faq" component={Faq} />
       </div>
     </div>

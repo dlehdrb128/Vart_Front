@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Table,  Container } from 'react-bootstrap';
-=======
-import "../App.css";
-import { Table, Container } from 'react-bootstrap';
->>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
 
 import NewDisclosureListItem from "../components/NewDisclosureList/NewDisclosureListItem"
 

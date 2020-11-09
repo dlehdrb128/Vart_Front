@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { Container } from "react-bootstrap";
 
-import CreateDisclosure from "../components/CreateDisclosure";
+import CreateDisclosure from "../components/CreateDisclosure/CreateDisclosure";
 
 import "../css/pages.css";
 
