@@ -29,20 +29,24 @@ const DisclosureItem = ({ match }) => {
 
     return (
         <div className="App">
-            <Table striped bordered hover>
-                <tbody>
-                    <tr>
-                        <td colSpan="2">리포트 제목</td>
-                        <td colSpan="2"> {disclosure.reportTitle}</td>
-                        <td colSpan="2">리포트 타입</td>
-                        <td colSpan="2"> {disclosure.type}</td>
-                    </tr>
-                    <tr>
+            <Table style={{marginTop:"50px"}} striped bordered hover>
+                <tbody >
+                   
+                    <tr>  
+                        <td>제목</td>
+                        <td>{disclosure.reportTitle}</td>
+                        <td>유형</td>
+                        <td>{disclosure.type}</td>
+                        </tr>
+                        <tr>
                         <td>실행일</td>
                         <td>{disclosure.applicableDate}</td>
                         <td>토큰명</td>
                         <td>{disclosure.token}</td>
+                        <td>작성일</td>
+                        <td>{disclosure.date}</td>
                     </tr>
+                    
                 </tbody>
             </Table>
             <Container>

@@ -75,7 +75,7 @@ function DisclosureScreen() {
                                 <th style={{ maxWidth: "40px" }} > 번호</th>
                                 <th>리포트 타이틀</th>
                                 <th style={{ maxWidth: "40px" }}>토큰명</th>
-                                <th style={{ maxWidth: "40px" }}>실행일</th>
+                                <th style={{ maxWidth: "40px" }}>작성일</th>
                             </tr>
                         </thead>
                         <tbody>

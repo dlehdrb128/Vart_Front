@@ -58,8 +58,9 @@ function ProjectItemScreen() {
   }, []);
 
   return (
+    <Container style={{ maxWidth:"800px"}}>
     <div className="app-body">
-      <Container>
+      
         <div>
           <Table responsive="sm">
             <thead className="table-font-title">
@@ -76,10 +77,11 @@ function ProjectItemScreen() {
               ))}
             </tbody>
           </Table>
+          
         </div>
         <Pagination totalLength={totalLength} active={loc} last={totalPageNum} paginationLimite={paginationLimite} onClick={(index) => setLoc(index)} />
-      </Container>
     </div>
+    </Container>
   );
 }
 

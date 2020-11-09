@@ -15,7 +15,7 @@ export default function NewDisclosureListItem({ disclosure, idx }) {
                 </Link>
             </td>
             <td className="bil-form">{disclosure.token}</td>
-            <td className="bil-form">{disclosure.applicableDate}</td>
+            <td className="bil-form">{disclosure.date}</td>
         </tr>
     );
 }

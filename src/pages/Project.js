@@ -7,7 +7,7 @@ import "../css/pages.css";
 
 const Project = () => {
   return (
-    <div className="App">
+    <div>
       <header className="app-header">
         <Image
           className="cc-carousel-item-image"
@@ -18,6 +18,7 @@ const Project = () => {
           fluid
           href="/" />
       </header>
+  
       <MainProjectList />
     </div>
   );
