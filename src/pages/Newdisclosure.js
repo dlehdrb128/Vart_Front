@@ -70,13 +70,13 @@ function DisclosureScreen() {
 
             <Container>
                 <div>
-                    <Table responsive="sm">
+                    <Table responsive="sm" style={{ textAlign: "center" }}>
                         <thead className="table-font-title">
                             <tr>
-                                <th>번호</th>
+                                <th style={{ maxWidth: "40px" }} > 번호</th>
                                 <th>리포트 타이틀</th>
-                                <th>토큰명</th>
-                                <th>실행일</th>
+                                <th style={{ maxWidth: "40px" }}>토큰명</th>
+                                <th style={{ maxWidth: "40px" }}>실행일</th>
                             </tr>
                         </thead>
                         <tbody>

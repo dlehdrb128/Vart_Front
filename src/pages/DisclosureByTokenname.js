@@ -1,5 +1,10 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Table,  Container } from 'react-bootstrap';
+=======
+import "../App.css";
+import { Table, Container } from 'react-bootstrap';
+>>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
 
 import NewDisclosureListItem from "../components/NewDisclosureList/NewDisclosureListItem"
 
@@ -29,10 +34,10 @@ const DisclosureByTokenname = ({ match }) => {
         <div className="app-body">
             <Container>
                 <div>
-                    <Table responsive="sm">
+                    <Table>
                         <thead className="table-font-title">
                             <tr>
-                                <th>번호</th>
+                                <th style={{ maxWidth: "20px" }}>번호</th>
                                 <th>리포트 타이틀</th>
                                 <th>토큰명</th>
                                 <th>실행일</th>

@@ -67,11 +67,7 @@ function Navbar() {
 
                 <BSNavbar.Toggle aria-controls="responsive-navbar-nav" />
                 <BSNavbar.Collapse id="responsive-navbar-nav" className="App-partials">
-
                     <Nav.Link href="../About">소개</Nav.Link>
-
-                    <Nav.Link href="../Service">서비스</Nav.Link>
-
                     {token !== null && user.permission === 'company' ? (
                         <NavDropdown title="가상자산" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="../Project">가상자산</NavDropdown.Item>

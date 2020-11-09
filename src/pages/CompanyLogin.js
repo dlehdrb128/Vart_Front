@@ -50,6 +50,7 @@ const CompanyLogin = ({ history }) => {
       {/* <button onClick={e => sample()} >sample</button> */}
       <header className="app-header">
         <Image
+          style={{ right: "500px" }}
           className="cc-carousel-item-image"
           src={require("../images/VART_.png")}
           width="300px"
@@ -58,6 +59,7 @@ const CompanyLogin = ({ history }) => {
           href="/"
         />
       </header>
+<<<<<<< HEAD
     
         <Container>
 
@@ -67,19 +69,41 @@ const CompanyLogin = ({ history }) => {
                 className="LoginBox"
                 type="email"
                 placeholder="아이디"
+=======
+      <div className="app-body">
+        <Container style={{ marginTop: "-90px" }} >
+
+          <Form>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label>이메일</Form.Label>
+              <Form.Control
+                className="LoginBox"
+                type="email"
+                placeholder="이메일"
+>>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
                 onChange={(e) => {
                   setUserEmail(e.target.value);
                 }}
                 value={userEmail}
               />
+<<<<<<< HEAD
             
+=======
+>>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
             </Form.Group>
-
             <Form.Group controlId="formBasicPassword">
+<<<<<<< HEAD
               <Form.Control
                 className="LoginBox"
                 type="password"
                 placeholder="패스워드"
+=======
+              <Form.Label>비밀번호</Form.Label>
+              <Form.Control
+                className="LoginBox"
+                type="password"
+                placeholder="비밀번호"
+>>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
                 onChange={(e) => {
                   setUserPwd(e.target.value);
                 }}
@@ -96,7 +120,7 @@ const CompanyLogin = ({ history }) => {
                 sumbitLogin(userEmail, pwd);
               }}
             >
-              Login
+              로그인
             </Button>
           </Form>
         </Container>

@@ -1,9 +1,15 @@
 import React from "react";
+<<<<<<< HEAD
 import { Image, Card, Container } from "react-bootstrap";
 
 import "../css/pages.css";
 
 const About = () => {
+=======
+import "../App.css";
+import { Image, Card, Container } from "react-bootstrap";
+const About = ({ history }) => {
+>>>>>>> 17595815c66c849a5d07998ce5db4738c9960ce0
 
   return (
     <div className="App">

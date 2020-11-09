@@ -1,0 +1,66 @@
+.MainButton{
+    margin-top:100px;
+    margin-left:100px;
+    max-height: 600px;
+    max-width: 2000px;
+    overflow: hidden;
+    width:200px;
+    position: absolute;
+  }
+  
+  .MainFont{
+    color: rgb(48, 45, 219);
+  }
+  .LoginBox{
+    max-width: 400px;
+    margin: auto;
+  }
+  .image{
+    margin-left: 700px;
+    max-height: 600px;
+    max-width: 2000px;
+    overflow: hidden;
+  }
+  
+  .cc-carousel-item-image{
+    max-height: 400px;
+    max-width: 2000px;
+    overflow: hidden;
+  }
+  
+  .cc-max{
+    max-height: 600px;
+    max-width: 1800px;
+    overflow: hidden;
+  }
+.image-size {
+  width:300px;
+  height:300px;
+}
+.bg{
+  position: fixed;
+  background-color: rgb(255, 255, 255) !important;
+  top:0;
+  left: 0;
+  right: 0;
+}
+.About{
+  max-width: 2000px;
+  max-height: 2000px;
+}
+.NavLog{
+  top:0;
+  left: 0;
+
+}
+.DBT{
+  margin-top: auto;
+}
+
+    /* Desktop */
+    .service-card{
+        width:500px;
+        height:450px; 
+        align-items:center
+    }
+/*  */
