@@ -1,6 +1,8 @@
 import React from "react";
 import { Pagination as BSPagination } from "react-bootstrap";
 
+import "../css/components.css"
+
 const Pagination = ({ totalLength ,active, last, paginationLimite, onClick }) => {
     return (
         <BSPagination>
