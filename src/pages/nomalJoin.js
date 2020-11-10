@@ -69,7 +69,7 @@ const NomalJoin = ({ history }) => {
 
                     <Form onSubmit={onSubmit} >
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Name</Form.Label>
+                            <Form.Label>이름</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="name"
@@ -79,39 +79,35 @@ const NomalJoin = ({ history }) => {
                                 name="name"
                                 required
                             />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
+                            
                         </Form.Group>
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label>이메일</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="email"
-                                placeholder="Enter email"
+                                placeholder="이메일"
                                 onChange={handleInputChange}
                                 value={user.email}
                                 name="email"
                                 required
                             />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
+                           
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>비밀번호</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="password"
-                                placeholder="Password"
+                                placeholder="비밀번호"
                                 onChange={handleInputChange}
                                 value={user.password}
                                 name="password"
                                 required
                             />
                         </Form.Group>
-                        <Button variant="primary" type="submit"> Submit </Button>
+                        <Button variant="primary" type="submit"> 가입하기 </Button>
                     </Form>
                 </Container>
             </div>

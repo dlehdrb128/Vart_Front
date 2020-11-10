@@ -69,11 +69,11 @@ const CompanyJoin = ({ history }) => {
                 <Container>
                     <Form onSubmit={onSubmit} >
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Name</Form.Label>
+                            <Form.Label>이름</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="name"
-                                placeholder="Enter name"
+                                placeholder="이름"
                                 onChange={handleInputChange}
                                 value={user.name}
                                 name="name"
@@ -81,27 +81,25 @@ const CompanyJoin = ({ history }) => {
                             />
                         </Form.Group>
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label>이메일</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="email"
-                                placeholder="Enter email"
+                                placeholder="이메일"
                                 onChange={handleInputChange}
                                 value={user.email}
                                 name="email"
                                 required
                             />
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
+                          
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>비밀번호</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="password"
-                                placeholder="Password"
+                                placeholder="비밀번호"
                                 onChange={handleInputChange}
                                 value={user.password}
                                 name="password"
@@ -111,18 +109,18 @@ const CompanyJoin = ({ history }) => {
 
 
                         <Form.Group controlId="formBasicPassword">
-                            <Form.Label>Companynum</Form.Label>
+                            <Form.Label>기업번호</Form.Label>
                             <Form.Control
                                 className="LoginBox"
                                 type="companynum"
-                                placeholder="CompanyNum"
+                                placeholder="기업번호"
                                 onChange={handleInputChange}
                                 value={user.companyNum}
                                 name="companyNum"
                                 required
                             />
                         </Form.Group>
-                        <Button variant="primary" type="submit"> Submit </Button>
+                        <Button variant="primary" type="가입하기"> Submit </Button>
                     </Form>
                 </Container>
             </div>
