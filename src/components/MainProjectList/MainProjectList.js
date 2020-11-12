@@ -58,7 +58,7 @@ function ProjectItemScreen() {
   }, []);
 
   return (
-    <Container style={{ maxWidth:"800px"}}>
+    <Container>
     <div className="app-body">
       
         <div>

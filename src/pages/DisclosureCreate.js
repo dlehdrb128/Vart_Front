@@ -47,10 +47,7 @@ const DisclosureCreate = ({ history }) => {
                     return res.json()
                 }
             })
-            .then((res) => {
-                alert(res.message)
-                history.push("./DisclosureCreate");
-            })
+            
             .catch((err) => {
                 console.log(err);
                 alert("업로드 에러");

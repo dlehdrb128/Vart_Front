@@ -28,36 +28,44 @@ const DisclosureItem = ({ match }) => {
     }, [])
 
     return (
-        <div className="App">
-            <Table style={{marginTop:"50px"}} striped bordered hover>
+        <div>
+        <Container style={{marginTop:"200px",maxWidth:"700px", textAlign:"center"}}>
+            <div style={{fontSize:"30px", marginBottom:"60px"}}>최근 공시</div>
+            <Table  striped bordered hover>
                 <tbody >
                    
                     <tr>  
-                        <td>제목</td>
-                        <td>{disclosure.reportTitle}</td>
-                        <td>유형</td>
+                        <th>제목</th>
+                        <td >{disclosure.reportTitle}</td>
+                    </tr>
+                    <tr>
+                        <th>유형</th>
                         <td>{disclosure.type}</td>
-                        </tr>
+                    </tr>
                         <tr>
-                        <td>실행일</td>
+                        <td>실행일</td>                        
                         <td>{disclosure.applicableDate}</td>
+                    </tr>
+                    <tr>
                         <td>토큰명</td>
                         <td>{disclosure.token}</td>
+                        </tr>
+                        <tr>
                         <td>작성일</td>
                         <td>{disclosure.date}</td>
                     </tr>
                     
                 </tbody>
-            </Table>
-            <Container>
-                <tr>
-                    <th>디테일 사항</th>
-                </tr>
-                <tr>{disclosure.details}</tr>
-
+            </Table>        
+             <table>
+            <tr >
+                <th>디테일 사항</th>
+            </tr>
+            <tr>{disclosure.details}</tr>
+            </table>
             </Container>
-        </div >
-    );
+            </div>
+        );
 };
 
 export default DisclosureItem;

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import { Container, Form, Button, } from "react-bootstrap";
 
 import "../css/pages.css";
 

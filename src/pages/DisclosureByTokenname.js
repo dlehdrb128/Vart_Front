@@ -35,7 +35,7 @@ const DisclosureByTokenname = ({ match }) => {
                                 <th style={{ maxWidth: "20px" }}>번호</th>
                                 <th>리포트 타이틀</th>
                                 <th>토큰명</th>
-                                <th>실행일</th>
+                                <th>작성일</th>
                             </tr>
                         </thead>
                         <tbody>

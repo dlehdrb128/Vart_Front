@@ -120,7 +120,7 @@ const CompanyJoin = ({ history }) => {
                                 required
                             />
                         </Form.Group>
-                        <Button variant="primary" type="가입하기"> Submit </Button>
+                        <Button variant="primary" type="submit"> 가입하기 </Button>
                     </Form>
                 </Container>
             </div>
