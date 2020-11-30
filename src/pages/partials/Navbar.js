@@ -25,7 +25,7 @@ function Navbar() {
         const token = localStorage.getItem('user')
 
         if (token !== null) {
-            fetch('http://192.168.0.33:3001/user/info', {
+            fetch('http://localhost:3001/user/info', {
                 mode: "cors",
                 method: "GET",
                 credentials: "include",

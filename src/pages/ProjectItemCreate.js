@@ -93,7 +93,7 @@ const ProjectItemCreate = ({ history }) => {
             }
         }
 
-        fetch("http://192.168.0.33:3001/publicinfo/invoke", {
+        fetch("http://localhost:3001/publicinfo/invoke", {
             mode: "cors",
             method: "POST",
             credentials: "include",

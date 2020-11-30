@@ -20,7 +20,7 @@ const ProjectItem = ({ match }) => {
     if (!match.params.id) {
       alert("잘못된 접근입니다.")
     }
-    fetch(`http://192.168.0.33:3001/publicinfo/query/${match.params.id}`, {
+    fetch(`http://localhost:3001/publicinfo/query/${match.params.id}`, {
       method: 'GET',
     }).then((resp) => {
       return resp.json()

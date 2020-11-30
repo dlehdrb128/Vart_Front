@@ -29,7 +29,7 @@ function ProjectItemScreen() {
   }, [totalLength, pageLimit]);
 
   useEffect(() => {
-    fetch("http://192.168.0.33:3001/publicinfo/list", {
+    fetch("http://localhost:3001/publicinfo/list", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"

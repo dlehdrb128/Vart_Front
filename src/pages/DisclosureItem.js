@@ -18,7 +18,7 @@ const DisclosureItem = ({ match }) => {
             alert("잘못된 접근입니다.")
         }
         
-        fetch(`http://192.168.0.33:3001/disclosure/query/${match.params.no}`, {
+        fetch(`http://localhost:3001/disclosure/query/${match.params.no}`, {
             method: 'GET',
         }).then((resp) => {
             return resp.json()

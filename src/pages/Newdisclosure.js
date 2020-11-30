@@ -25,7 +25,7 @@ function DisclosureScreen() {
 
 
     useEffect(() => {
-        fetch("http://192.168.0.33:3001/disclosure/list", {
+        fetch("http://localhost:3001/disclosure/list", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

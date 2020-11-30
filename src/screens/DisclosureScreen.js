@@ -12,7 +12,7 @@ function ProjectItemScreen() {
     })
 
     const fetchUserList = useCallback(() => {
-        return fetch('http://192.168.0.33:3001/publicinfo/list', {
+        return fetch('http://localhost:3001/publicinfo/list', {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",

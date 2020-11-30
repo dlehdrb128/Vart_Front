@@ -27,7 +27,7 @@ const CompanyJoin = ({ history }) => {
     const onSubmit = (e) => {
         e.preventDefault()
         console.log(JSON.stringify(user))
-        fetch("http://192.168.0.33:3001/user/company", {
+        fetch("http://localhost:3001/user/company", {
             mode: 'cors',
             method: "POST",
             credentials: "include",

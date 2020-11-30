@@ -29,7 +29,7 @@ const DisclosureCreate = ({ history }) => {
         const token = localStorage.getItem('user') 
         e.preventDefault();
 
-        fetch("http://192.168.0.33:3001/disclosure/invoke", {
+        fetch("http://localhost:3001/disclosure/invoke", {
             mode:"cors",    
             method: "POST",
             credentials: "include",

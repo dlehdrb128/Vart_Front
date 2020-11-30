@@ -13,7 +13,7 @@ const CompanyLogin = ({ history }) => {
       password: pwd,
     };
     console.log(JSON.stringify(data));
-    fetch("http://192.168.0.33:3001/user/login", {
+    fetch("http://localhost:3001/user/login", {
       mode: 'cors',
       method: "POST",
       body: JSON.stringify(data),

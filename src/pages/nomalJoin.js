@@ -26,7 +26,7 @@ const NomalJoin = ({ history }) => {
     const onSubmit = (e) => {
         e.preventDefault()
         console.log(JSON.stringify(user))
-        fetch("http://192.168.0.33:3001/user/person", {
+        fetch("http://localhost:3001/user/person", {
             mode: 'cors',
             method: "POST",
             credentials: "include",

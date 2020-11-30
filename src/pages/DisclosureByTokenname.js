@@ -14,7 +14,7 @@ const DisclosureByTokenname = ({ match }) => {
         if (!match.params.tokenName) {
             alert("잘못된 접근입니다.")
         }
-        fetch(`http://192.168.0.33:3001/disclosure/query/token/${match.params.tokenName}`, {
+        fetch(`http://localhost:3001/disclosure/query/token/${match.params.tokenName}`, {
             method: 'GET',
         }).then((resp) => {
             console.log(resp)
